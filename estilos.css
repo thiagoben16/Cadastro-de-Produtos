@@ -1,258 +1,211 @@
-:root{
-    -var-fundo-pagina: #3a50e4
+:root {
+    --azul-fundo: #1a2a6c;
+    --azul-destaque: #3a50e4;
+    --branco-gelo: #f8f9fa;
 }
 
-*{
+/* 1. RESET E BASE */
+* {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-body{
-    background-color:#1a2a6c;
+
+body {
+    background-color: var(--azul-fundo);
     color: whitesmoke;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
-    font-size: 22px;
-    font-weight: 700;
+    min-height: 100vh;
 }
 
-.cabecalho{
+/* 2. CABEÇALHO E BOTÕES DE MENU */
+.cabecalho {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    background-color: var(--azul-destaque);
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.botao-formulario, 
+.botao-buscar {
+    width: 250px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--azul-fundo);
+    background-color: var(--branco-gelo);
+    border-radius: 12px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.botao-formulario:hover, 
+.botao-buscar:hover {
+    background-color: var(--azul-destaque);
+    color: white;
+}
+
+/* 3. CARD DO FORMULÁRIO */
+.formulario {
+    background-color: var(--branco-gelo);
+    padding: 30px;
+    border-radius: 20px;
     width: 100%;
-    height: 10vh;
-}
-
-.cabecalho h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2% 0;
-}
-
-.conteiner-main{
+    max-width: 600px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
+    gap: 15px;
+    color: var(--azul-fundo);
+}
+
+.formulario label {
+    background-color: var(--azul-destaque);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.formulario input {
     width: 100%;
-   
+    height: 40px;
+    border: 2px solid var(--azul-fundo);
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 16px;
 }
 
-.botao-formulario{
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    color: #1a2a6c;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #000000;
-}
-.botao-formulario:hover{
-    color: #f8f9fa;
-    background-color: #1a2a6c;
-    box-shadow: 5px 5px 5px #000000;
-    border: 1px solid #f8f9fa;
-    cursor: pointer;
-}
-
-.botao-formulario:active{
-    color: #1a2a6c;
-    background-color: #f8f9fa;
-    box-shadow: 5px 5px 5px #000000;    
-    cursor: pointer;
-}
-
-.botao-buscar{
-    margin-top: 5%;
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    color: #1a2a6c;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #000000;
-}
-.botao-buscar:hover{
-    color: #f8f9fa;
-    background-color: #1a2a6c;
-    box-shadow: 5px 5px 5px #000000;
-    border: 1px solid #f8f9fa;
-    cursor: pointer;
-}
-
-.botao-buscar:active{
-    color: #1a2a6c;
-    background-color: #f8f9fa;
-    box-shadow: 5px 5px 5px #000000;    
-    cursor: pointer;
-}
-
-.formulario{
-   background: none; 
-   width: 100%;
-   max-width: 500px; /* Evita que ele ocupe a tela toda */
-   margin: 20px auto;     
-   border-radius: 8px;
-   display: flex;
-   flex-direction: column;
-   width: 600px;
-   gap: 25px;
-   background-color: #f8f9fa;
-   color: #1a2a6c;
-   padding: 20px;
-}
-
-.formulario input{
-    border: #1a2a6c solid 1px;
-    border-radius: 5px;
-}
-
-.form-descricao{
+.form-numeros {
     display: flex;
-    flex-direction: column;
+    gap: 15px;
 }
 
-.form-numeros{
+.botao {
     display: flex;
-    flex-direction: row;
-    justify-content: start;    
-    gap: 20px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botao button {
     flex: 1;
+    height: 45px;
+    background-color: var(--azul-fundo);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.form-descricao input{
-
-    height: 30px;
-    padding: 2px 5px;
-    font-size: 18px;
-    color: #1a2a6c;
-} 
-
-
-.form-numeros input{
-    width: 100px;
-    height: 30px;
-    padding: 2px 5px;
-    font-size: 18px;
-    color: #1a2a6c;
-}
-.botao{
-    width: 100%;
-    height: 50px;
+/* 4. BUSCADOR (INPUT E BOTÕES LADO A LADO) */
+.form-buscador {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;    
     gap: 10px;
-    
-}
-
-.botao button{
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    background-color: #1a2a6c;
-    color: #f8f9fa;
-    font-size: 18px;
-    border-radius: 10px;
+    margin-top: 20px;
 }
 
-.botao button:hover{
+#busca-id {
+    height: 45px;
+    width: 250px;
+    padding: 0 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.botao-form-buscador, 
+.botao-form-buscador-voltar,
+.form-buscador button {
+    height: 45px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--azul-fundo);
+    background-color: var(--branco-gelo);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+/* 5. TABELA COM BOTÕES + E - */
+.container-tabela {
     width: 100%;
-    height: 100%;
-    background-color: #f8f9fa;
-    color: #1a2a6c;
-    border-radius: 10px;
-    cursor: pointer;
-    border: #1a2a6c solid 1px;
+    max-width: 1000px;
+    margin-top: 30px;
+    padding: 0 20px;
 }
 
-.botao button:active{
+table {
     width: 100%;
-    height: 100%;
-    background-color: #1a2a6c;
-    color: #f8f9fa;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+td {
+    background-color: var(--branco-gelo);
+    color: var(--azul-fundo);
+    padding: 15px;
+    text-align: center;
     border-radius: 10px;
-}
-.container-planilha{    
- max-width: 800px;
- display: flex;
- flex-direction: column;
- padding: 5% 0;    
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
 }
 
-.container-tabela{
-    width: 800px;
-    border: 1px solid #f8f9fa;
-    border-radius: 10px;
-
-}
-
-table{
-    padding: 5% 2%;
-}
-
-table td{
-    background-color: #f8f9fa;
-    color: #1a2a6c;
-    padding: 20px 0;
-    font-size: 18px;
+.btn-mais, .btn-menos {
+    width: 35px;
+    height: 35px;
     border-radius: 5px;
-    box-shadow: 3px 3px 2px #202122;
-    text-align: center;
-}
-
-.container-tabela th{
-    padding: 5% 0;
-    text-align: center;
-    
-}
-
-.container-tabela td{
-    text-align: center;
-    
-    
-}
-
-
-
-.hidden{
-    display: none;
-}
-
-#produtoBuscado button{
-    box-shadow: 5px 5px #000000;
-}
-
-#busca-id{
-    padding: 2px 5px;
-    font-size: 18px;
-    color: #1a2a6c;
-    border-radius: 5px;
-}
-
-.botao-form-buscador, .botao-form-buscador-voltar{
-    padding: 2px;
-    width: 100px;
-    height: 30px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    font-size: 18px;
-    color: #1a2a6c;
-    
-}
-
-.botao-form-buscador:hover, .botao-form-buscador-voltar:hover{
-   
-    background-color: #1a2a6c;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
-    color: #f8f9fa;
-    border: 1px solid #f8f9fa;
+    margin: 0 5px;
+    color: white;
 }
 
-.botao-form-buscador:active, .botao-form-buscador-voltar:active{
-   
-    background-color: #f8f9fa;
-    cursor: pointer;
-    color: #1a2a6c;
-    border: 1px solid #f8f9fa;
+.btn-mais { background-color: #28a745; }
+.btn-menos { background-color: #dc3545; }
+
+/* 6. MOBILE SIMPLES (SEM CAGAR O LAYOUT) */
+@media (max-width: 650px) {
+    .form-buscador {
+        flex-direction: column;
+    }
+    
+    #busca-id, .botao-form-buscador, .botao-form-buscador-voltar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .form-numeros {
+        flex-direction: column;
+    }
+
+    .formulario {
+        width: 95%;
+    }
+    
+    /* Mantém a tabela rolável se for muito grande, sem esconder dados */
+    .container-tabela {
+        overflow-x: auto;
+    }
 }
+
+.hidden { display: none; }
