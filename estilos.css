@@ -184,27 +184,36 @@ td {
 .btn-menos { background-color: #dc3545; }
 
 /* 6. MOBILE SIMPLES (SEM CAGAR O LAYOUT) */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
+    /* Ajusta o formulário de busca para não esmagar os botões */
     .form-buscador {
-        flex-direction: column;
-    }
-    
-    #busca-id, .botao-form-buscador, .botao-form-buscador-voltar {
-        width: 100%;
-        max-width: 300px;
+        flex-direction: column !important;
+        width: 90% !important;
+        gap: 10px;
     }
 
-    .form-numeros {
-        flex-direction: column;
+    #busca-id {
+        width: 100% !important;
     }
 
-    .formulario {
-        width: 95%;
+    /* Melhora a visualização dos cards de resultado da busca */
+    .container-resultado-cards div {
+        width: 100% !important; /* Faz cada informação ocupar uma linha no celular */
+        text-align: center;
+        box-sizing: border-box;
     }
-    
-    /* Mantém a tabela rolável se for muito grande, sem esconder dados */
+
+    /* Tabela: Em vez de sumir, ela vira um scroll lateral suave */
     .container-tabela {
         overflow-x: auto;
+        display: block;
+    }
+
+    /* Garante que os botões de ação fiquem fáceis de clicar no touch */
+    .btn-mais, .btn-menos {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
     }
 }
 
