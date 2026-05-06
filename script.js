@@ -1,6 +1,6 @@
 // Sua configuração do Supabase permanece a mesma
-const supabaseKey = 'sb_publishable_KRR8xYMRFmLEgXVW5XF_rg_hsNiXN9V';
-const supabaseUrl = 'https://oogscqpaetynejvdjen.supabase.co';
+const supabaseKey = 'https://nzgqqrgeatfynstjvdyn.supabase.co';
+const supabaseUrl = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56Z3FxcmdlYXRmeW5zdGp2ZHluIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MTExMzYsImV4cCI6MjA5MzQ4NzEzNn0.GZqcEr43UJjJzWChh8m8C7FKEcTFSOrgwlgWGMrHNdQ';
 const supaBase = supabase.createClient(supabaseUrl, supabaseKey);
 
 let lista_Produtos = [];
